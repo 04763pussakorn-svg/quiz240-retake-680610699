@@ -44,10 +44,10 @@ app.get("/student", (req: Request, res: Response) => {
   });
 });
 
-app.use("/api/v699/auth/login", userRoutes);
+app.use("/api/v699/student", userRoutes);
 app.use("/api/v699/basket/:userId", itemRoutes);
 
-// error handlers 
+// endpoint check middleware
 app.use(invalidJsonMiddleware); 
 app.use(notFoundMiddleware);   
 
